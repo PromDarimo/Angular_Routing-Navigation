@@ -8,7 +8,7 @@ const routes: Routes = [
   {path : "" , redirectTo : "/list", pathMatch : "full"}, //  puting on above for not getting error 
   //and it will return to select list c auto when the url path is emty and just enter 
   {path : "list", component : StudentListComponent},      //  Student List Component
-  {path : "detail", component : StudentDetailComponent},  //  Student Detail Component
+  {path : "detail/:id", component : StudentDetailComponent},  //  Student Detail Component
   {path : "**", component : PageNotFoundComponent} ,      //  page not found and ** is defult angular
 ];
 

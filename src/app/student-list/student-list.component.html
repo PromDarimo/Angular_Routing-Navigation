@@ -1,1 +1,8 @@
 <p>student-list works!</p>
+
+<!-- Navigate to Detail page with parameter-->
+<ng-container *ngFor="let user of data">
+    <p><button (click)="goToDeatil(user.id)" [class.highlight] = "checkHightLight(user.id)">{{user.name}}</button></p>
+</ng-container>
+
+<p>ID's Student Selected from Deatil page: {{visitedId}}</p>

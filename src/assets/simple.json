@@ -1,0 +1,28 @@
+
+[
+    {
+        "name" : "Isuzu",
+        "age" : 18,
+        "gender" : "female"
+    },
+    {
+        "name" : "Batman",
+        "age" : 20,
+        "gender" : "male"
+    },
+    {
+        "name" : "Aquaman",
+        "age" : 19,
+        "gender" : "male"
+    },
+    {
+        "name" : "Green Lantern",
+        "age" : 22,
+        "gender" : "male"
+    },
+    {
+        "name" : "The Flash",
+        "age" : 18,
+        "gender" : "male"
+    }
+]
