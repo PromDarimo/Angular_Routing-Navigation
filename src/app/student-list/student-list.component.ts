@@ -8,9 +8,9 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class StudentListComponent {
 
-  visitedId : number = 0; //from id stu from detail page
+  visitedId: number = 0; //from id stu from detail page
 
-  data : IUser []= [
+  data: IUser[] = [
     { "id": 1, "name": "Isuzu", "age": 18, "gender": "female" },
     { "id": 2, "name": "Batman", "age": 20, "gender": "male" },
     { "id": 3, "name": "Aquaman", "age": 19, "gender": "male" },
@@ -24,24 +24,27 @@ export class StudentListComponent {
   ) { }
 
   ngOnInit() {
-    this.ActivatedRoute.paramMap.subscribe((data : ParamMap) => {
+    this.ActivatedRoute.paramMap.subscribe((data: ParamMap) => {
       this.visitedId = parseInt(data.get("id") || "-1");
     });
   }
 
-  //inject router
-  goToDeatil(dataSelected : any) {
+  //Inject router paramater (user.id)
+  goToDeatil(dataSelected: any) {
+    //Normal Navagate
     this.router.navigate(["/detail", dataSelected]);
+    // this.router.navigate(["..", dataSelected], {relativeTo : this.ActivatedRoute});
   }
 
-  //check condition class 
-  checkHightLight(studentId : number){
-    return studentId === this.visitedId ; //color changing only when studentId(list) == visitedId(detail)
+  //Check condition class 
+  checkHightLight(studentId: number) {
+    return studentId === this.visitedId;
+    //color changing only when studentId(list) == visitedId(detail)
   }
 }
 export interface IUser {
-  id : number,
-  name : string,
-  age : number,
-  gender : string,
+  id: number,
+  name: string,
+  age: number,
+  gender: string,
 }
